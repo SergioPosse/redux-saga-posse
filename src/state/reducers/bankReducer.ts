@@ -1,9 +1,6 @@
 import {IAction} from '../actions-interface/index';
-const initialState:any = {
-			count:0,
-			users:[],
-			loading:false,
-			error:null
+const initialState = {
+			count:0
 };
 
 const reducer = (state:any = initialState, action: IAction) => {
