@@ -5,6 +5,10 @@ import { IAction } from "../actions-interface";
 //importando IAction ahora el payload respeta el tipo
 //porque lo especifique en el tipo que sera el dispatch
 //hay que importar el tipo Dispatch de redux y adjuntarle Action
+export const getUsers = ()=>{
+	return {
+		type:'GET_USERS_REQUESTED'	}
+}
 
 export const depositMoney = (amount:number)=>{
 	return (dispatch:Dispatch<IAction>) => {

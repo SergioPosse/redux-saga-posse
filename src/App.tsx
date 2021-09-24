@@ -9,7 +9,7 @@ import { actionCreators, State } from './state/index';
 
 function App() {
   // const {depositMoney, withdrawMoney, bankrupt} = bindActionCreators(actionCreators, dispatch);
-  const {depositMoney, withdrawMoney, bankrupt} = actionCreators;
+  const {depositMoney, withdrawMoney, bankrupt, getUsers} = actionCreators;
   const dispatch = useDispatch();
 
   const amount = useSelector((state:State)=>state.bank);
@@ -20,6 +20,7 @@ function App() {
       <button onClick={()=>dispatch(depositMoney(1000))}>Deposit</button>
       <button onClick={()=>dispatch(withdrawMoney(500))}>Withdraw</button>
       <button onClick={()=>dispatch(bankrupt())}>Bankrupt</button>
+      <button onClick={()=>dispatch(getUsers())}>get users</button>
     </div>
   );
 }
