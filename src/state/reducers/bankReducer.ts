@@ -1,13 +1,12 @@
 import {IAction} from '../actions-interface/index';
-
-const initialState = {
-	count:0,
-	users:[],
-	loading:false,
-	error:null,
+const initialState:any = {
+			count:0,
+			users:[],
+			loading:false,
+			error:null
 };
 
-const reducer = (state:any = initialState, action: any) => {
+const reducer = (state:any = initialState, action: IAction) => {
 	switch (action.type) {
 		case "deposit":
 			return  state.count + action.payload;
@@ -19,8 +18,8 @@ const reducer = (state:any = initialState, action: any) => {
 			return {...state,loading:true};
 		case 'GET_USERS_SUCCESS':
 			return {...state,users:action.payload,loading:false};
-		case 'GET_USERS_ERROR':
-			return {...state,error:action.message};
+		// case 'GET_USERS_ERROR':
+		// 	return {...state,error:action.payload};
 		default:
 			return state;
 	}

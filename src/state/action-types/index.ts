@@ -1,5 +1,8 @@
 export enum ActionTypes {
 	DEPOSIT = "deposit",
 	WITHDRAW = "withdraw",
-	BANKRUPT = "bankrupt"
+	BANKRUPT = "bankrupt",
+	GET_USERS_REQUESTED = 'GET_USERS_REQUESTED',
+	GET_USERS_SUCCESS = 'GET_USERS_SUCCESS',
+	GET_USERS_ERROR = 'GET_USERS_ERROR'
 }

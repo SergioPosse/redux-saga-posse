@@ -13,5 +13,16 @@ interface WithdrawAction {
 interface BankruptAction {
 	type: ActionTypes.BANKRUPT
 }
-
-export type IAction = DepositAction | WithdrawAction | BankruptAction;
+interface GetUsersRequested {
+	type: ActionTypes.GET_USERS_REQUESTED,
+	payload: []
+}
+interface GetUsersSuccess {
+	type: ActionTypes.GET_USERS_SUCCESS,
+	payload: []
+}
+interface GetUsersError {
+	type: ActionTypes.GET_USERS_ERROR,
+	payload: []
+}
+export type IAction = DepositAction | WithdrawAction | BankruptAction | GetUsersRequested | GetUsersError | GetUsersSuccess;
